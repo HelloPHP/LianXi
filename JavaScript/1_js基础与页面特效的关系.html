@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 4_js基础与页面特效的关系 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+    // 鼠标移动 改变图片
+    function pic(pname)
+    {
+        var p = document.getElementsByTagName('img')[0];
+        p.src='img/' + pname + '.jpg';
+    }
+
+
+
+
+
+/*      全选 / 反选
+        思路：找到input，放进数组
+              循环数组
+              将checkbox属性设为：checked
+
+    
+    function selAll()       // 全选
+    {
+        var i;              // checkbox的个数
+        for (i=0; i < document.getElementsByName('hobby').length ; i++ )
+        {
+            document.getElementsByName('hobby')[i].checked='checked';
+        }
+    }
+
+*/
+    // 简写以上代码：
+    function selAll()       // 全选
+    {
+        var i;     
+        var hobby=document.getElementsByName('hobby');
+        for (i=0; i < hobby.length ; i++ )
+        {
+            hobby[i].checked='checked';
+        }
+    }
+
+
+    function unAll()
+    {
+        var i;
+        var hobby=document.getElementsByName('hobby');
+        for (i=0; i<hobby.length ; i++ )
+        {
+            hobby[i].checked=false;
+        }
+    }
+
+
+
+
+     function fanAll()       // 反选
+    {
+        var i;               
+        for (i=0; i < document.getElementsByName('hobby').length ; i++ )
+        {
+            if(document.getElementsByName('hobby')[i].checked)
+            {
+                document.getElementsByName('hobby')[i].checked=false;
+            }else
+            {
+                document.getElementsByName('hobby')[i].checked="checked";
+            }
+        }
+    }
+
+</script>
+</head>
+
+<body>
+    <!-- 鼠标移动 改变图片 -->
+    <img src="img/a.jpg" />
+    </p>
+
+    <p>
+    <a href="#" onmouseover="pic('a');">a</a>
+    <a href="#" onmouseover="pic('b');">b</a>
+    <a href="#" onmouseover="pic('c');">c</a>
+    </p>
+    
+
+
+
+
+    <!-- 用js做全选 / 反选 -->
+    <br /><br />
+    <form>
+        <p><input type="checkbox" name="hobby" />篮球</p>
+        <p><input type="checkbox" name="hobby" />足球</p>
+        <p><input type="checkbox" name="hobby" />排球</p>
+        <p><input type="checkbox" name="hobby" />乒乓球</p>
+        <p><input type="checkbox" name="hobby" />棒球</p>
+        <p><input type="button" value="全选" onclick="selAll();" />
+           <input type="button" value="全不选" onclick="unAll();" />
+           <input type="button" value="反选" onclick="fanAll();"/></p>
+    </form>
+</body>
+</html>

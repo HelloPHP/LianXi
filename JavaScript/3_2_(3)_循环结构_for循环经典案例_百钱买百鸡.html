@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 3_2_(3)_循环结构_for经典案例_百钱买百鸡 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+     
+/*
+    题目：
+    今有鸡翁一，值钱五；鸡母一，值钱三；鸡雏三，值钱一；百钱买鸡百只，问鸡翁、母、雏各几何？
+
+    意思是，公鸡5文钱1只，母鸡3文钱1只，小鸡1文钱买3只，现在用100文钱共买了100只鸡，问：在这100只鸡中，公鸡、母鸡和小鸡各是多少只？（设每种至少一只）
+
+    解决思路：枚举法 
+*/
+    
+
+    var g;      // 公鸡数量
+    var m;      // 母鸡
+    var c;      // 小鸡
+/*    
+    for ( g=1; g<100 ; g++ )          // 最大循环次数100*100*100 100万次
+    {
+        for ( m=1; m<100 ; m++ )
+        {
+            for (c=1; c<100 ; c++ )
+            {
+                if ((g+m+c) == 100 && (5*g+3*m+c/3)==100)  // 鸡数量=100 并且 金额=100
+                {
+                    document.write("公鸡" + g +"只，母鸡" + m + "只，小鸡" + c + "只<br />");
+                }
+            }
+        }
+    }
+
+
+// ----------- 第一次优化： ----------- 最大循环次数100*100 1万次
+    for ( g=1; g<100 ; g++ )        
+    {
+        for ( m=1; m<100 ; m++ )
+        {
+            c=100 - g - m;         // 优化点：确定公鸡、母鸡数量后，即可确定小鸡数量
+             
+                if ((g+m+c) == 100 && (5*g+3*m+c/3)==100)  // 鸡数量=100 并且 金额=100
+                {
+                    document.write("公鸡" + g +"只，母鸡" + m + "只，小鸡" + c + "只<br />");
+                }
+             
+        }
+    }
+    
+
+// ----------- 第二次优化： ----------- 最大循环次数20*33 660次
+    for ( g=1; g<20 ; g++ )       //优化点： 公鸡5文一只，因此最多20只   
+    {
+        for ( m=1; m<33 ; m++ )
+        {
+            c=100 - g - m;
+             
+                if ((g+m+c) == 100 && (5*g+3*m+c/3)==100)  // 鸡数量=100 并且 金额=100
+                {
+                    document.write("公鸡" + g +"只，母鸡" + m + "只，小鸡" + c + "只<br />");
+                }
+             
+        }
+    }    
+*/
+
+
+// 如果只想得到一个结果后就停止运算：
+
+baiji:                          // 标签，用于标志这个for循环
+    for ( g=1; g<20 ; g++ )           
+    {
+        for ( m=1; m<33 ; m++ )
+        {
+            c=100 - g - m;            
+                if ((g+m+c) == 100 && (5*g+3*m+c/3)==100)  
+                {
+                    document.write("公鸡" + g +"只，母鸡" + m + "只，小鸡" + c + "只<br />");
+                    break baiji;
+                }
+        }
+    }  
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

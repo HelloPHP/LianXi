@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 3_2_(3)_循环结构_for </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+/*  // 题目 1
+    var i;
+    for (i=0; i<=5; i++)
+    {
+        document.write(i + '<br />');
+    }
+*/
+
+
+
+
+/*  // 题目 2
+    共有9元，请客户吃饭，每次花一元，一共能请几次？
+
+    var money;
+    var i=0;
+    for (money=9; money>0 ; money-- )
+    {
+        i+=1;
+   
+    }
+    document.write(i + "<br />" );
+*/
+
+
+
+
+/*  // 题目 3
+    有一个人出差, 公司给10050元钱, 出差每天花300,  
+    问：这个人什么时间回来?
+    ----当他的钱已经不够一天的差旅费时, 回来
+
+
+    var money;
+    var i=0;
+    for (money=10050; money>299; money-=300)
+    {
+        i++;
+    }
+    document.write(i + "天以后回来"); 
+ */   
+
+
+
+
+/*  // 题目 4                                 // 练习： 一个for循环 打印2个变量 
+    张三有9元，李四有0元
+    张三每次给李四1元，直到0
+    李四每次增加1元
+*/
+
+    var money;                     
+    var LiSiGet;
+/*    for (money=9; money>0 ; money-- )       // 解决方法一
+    {
+         LiSiGet+=1;            
+         document.write("我有 " + money + '元钱给了李四,得到' + LiSiGet + "<br />");
+    }
+*/
+
+        for (money=9,LiSiGet=0; money>0; money--)    // 解决方法二
+    {
+               
+         document.write("张三有 " + money + '元钱给了李四,李四得到' + (++LiSiGet) + "元<br />");
+    }
+
+
+
+
+/*  // 题目 5
+    打印 如下效果
+    9 - 0
+    8 - 1
+    7 - 2
+    ...
+    0 - 9
+*/
+    //  解决方法 一：
+    var i, j;
+    for (i=9,j=0;i>0 ;i--,j++)
+    {
+        document.write(i + '-' + j +'<br />');
+    }
+    
+    // 解决方法二：
+    var a;
+    var b=0;
+    for (a=9;a>=0 ;a-- )
+    {
+        
+        document.write(a + "-" + b + "<br />");
+        b++;
+    }
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

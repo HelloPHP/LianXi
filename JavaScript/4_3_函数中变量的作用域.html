@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 4_3_函数中变量的作用域 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<script type="text/javascript">
+    var a=3;
+    var b=4;
+    
+    function out()
+    {
+        var a=5;
+        var c=6;
+        document.write(a + "-" + b + "<br />");    // a=5, b=4
+
+        function ins()
+        {
+        //  d=7;                    // 定义变量必须用var，否则会造成全局变量被污染
+            var d=7;                               
+            document.write(c + "<br />");          // c=6
+        }
+        ins();
+    }
+
+    out();
+    document.write(d);                             // 外部不能调用函数内定义的变量          
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

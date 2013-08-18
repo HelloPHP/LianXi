@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 3_1 流程控制_if </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+
+    // 单路分支
+/*
+    var a=7;
+    if (a>5)
+    {   
+        document.write("a大于5<br/>");
+    }
+    document.write("没有符合的数据可显示<br/>");
+
+     // 双路分支
+   var sex="女";
+
+    if (sex=="男") 
+    {
+        document.write(" 男<br />");
+    }else{
+        document.write(" 女<br />");
+    }
+*/
+
+
+    // 多路分支
+    /*
+        age: 0-5  儿童
+        age: 6-10 小朋友
+        age:11-17 青少年
+        age:18+   成年人
+    */
+        var age=11;
+        if(age<=5){
+            document.write(" 儿童<br />");
+        }else if(age<=10){
+            document.write(" 小朋友<br />");
+        }else if(age<=17){
+            document.write(" 青少年<br />");
+        }else{
+            document.write(" 成年人<br />");
+        }
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

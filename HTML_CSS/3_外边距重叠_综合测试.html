@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 外边距重叠 综合测试 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<style type="text/css">
+
+
+
+#a{
+    float:left;
+    width:100px;
+    height:100px;
+    margin-right:40px;
+    background:green;
+}
+#b{
+    float:left;
+    width:100px;
+    height:100px;
+    margin-lift:20px;
+    background:blue;
+}
+
+#c{
+    clear:both;         /* 用该div测量上方2个div重叠后总宽度＝240px */
+    width:240px;
+    height:10px;
+
+    background:gold;
+}
+
+#xxx{
+    width:240px;        /* 分割线 */
+    height:50px; 
+}
+
+p{
+    margin:0;
+}
+
+
+</style>
+</head>
+
+<body>
+    <div id="a">1</div>
+    <div id="b">2</div>
+    <div id="c">3</div>
+    <div id="xxx">x</div>
+    <p>aaaaaaaaaaa</p>bbbbbbbbbbbbbb
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 3_2_(1)_循环结构_while_面试题(2) </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+/*    
+    假设某人有100,000现金。每经过一次路口需要进行一次交费。
+    交费规则为当他现金大于50,000时每次需要交5%; 
+    如果现金小于等于50,000时每次交5,000。
+    请写一程序计算此人可以经过多少次这个路口。
+*/
+
+
+    var money=100000;         // 总金额
+    var count=0;            // 计数器
+
+/*                          // 自己做的    
+    while (money>50000)
+    {
+        money = money * 0.95;
+        count++;
+    }
+    while (money<=50000 && money>4999)
+    {
+        money = money - 5000;
+        count++;
+    }
+    document.write(count  + ' ' + money);
+*/
+
+//--------------------------------------------
+
+
+
+    while (money >= 5000)       //别人做的
+    {
+        if (money > 50000)
+        {
+            money = money * 0.95;
+            count++;
+        }
+
+        if (money <= 50000)
+        {
+            money = money-5000;
+            count++;
+        }
+    }
+    document.write(money + ' ' + count);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

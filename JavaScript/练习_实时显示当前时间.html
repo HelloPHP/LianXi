@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 练习: 实时显示当前时间 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+
+    function getNewTime(){
+        
+
+        var a = new Date();     // 使用Date()对象，要先New
+
+        var hours=a.getHours();
+        var mins=a.getMinutes();
+        var sec=a.getSeconds();
+        
+        document.getElementById('a123').value = (hours + ":" + mins + ":" + sec);
+     
+    }
+       
+        //  如果发生无法找到id:"a123" , html元素加载完后再运行js，把执行语句放在相关html之后
+
+    setInterval('getNewTime()',1000);
+
+</script>
+</head>
+
+<body>
+    <input type="text" id="a123" />
+
+</body>
+</html>

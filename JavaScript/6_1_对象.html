@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 6_1_对象 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+ 
+ // 创建空对象
+    var a={};                         // 创建对象用{}
+    var b=new Object();  
+
+//  创建有值的对象
+    var stu={name:"小张",age:15,stuID:001,score:"95",tel:13911112222};     // 值前面要加 "属性"
+
+//  引用对象(常用的方法)
+    document.write(stu.age + "<br />-------------------<br />");
+// 或 document.write(stu['name']);    // 该方法不常用
+ 
+ 
+
+//  遍历对象
+    for (y in stu)
+    {
+        document.write(stu[y] + "<br />");  // 用for in结构时，只能使用“对象[属性]”这个方式，不能用“对象.属性” 来遍历
+    }
+    document.write("----------------------<br>")
+    
+// 删除对象的单元值：
+    delete stu.tel;
+    delete stu.score;
+
+
+    for (y in stu)
+    {
+        document.write(stu[y] + "<br />");  
+    }
+
+//  循环 把对象内的属性全部删除
+    for(y in stu)
+    {
+        delete stu[y];
+    }
+    document.write("----------------------<br>")
+    document.write(stu[y] + "<br />");  
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

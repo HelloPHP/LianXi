@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 13_表单 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<style type="text/css">
+
+
+body{
+    font-size:14px;
+}
+
+fieldset{
+    width:300px;
+    border-radius:7px;
+}
+
+/* #abn{
+    border-radius:7px;
+}
+  */
+
+textarea{
+    width:300px;
+    height:100px;
+}
+
+
+</style>
+</head>
+
+<body>
+     <fieldset>
+    <legend>基本信息</legend>
+    <form action="13_表单_接收页面.html" method="GET">
+        <p>用户名：<input id="username" type="text" name="username"></p>
+        密&nbsp;&nbsp;码：<input type="password" name="passwd"></p> 
+        性&nbsp;&nbsp;别： 
+          <label for="boy">男</label>
+          <input type="radio" name="sex" value="boy" id="boy"> 
+          <label for="girl">女</label>
+          <input type="radio" name="sex" value="girl" id="girl"></p>
+                   上传：<input type="file" name="xxx"><br />
+        <input type="submit"  value="submit" />
+    </form>
+    </fieldset>  
+<p>
+<fieldset>
+<legend>个人简介</legend>
+    <form  action="aaa.html" method="get">
+    <input type="hidden" name="yincang" value="IDaa" />
+        <p>姓名：<input id="abn" type="text" name="myText" /></p>
+        <p>密码：<input type="password" name="myPasswd" /></p>
+        <p>性别：
+        <label for="boy2">男</label><input id="boy2" type="radio" name="sex" value="boy" checked="checked"/>
+        <label for="girl2">女<input id="girl2" type="radio" name="sex" value="girl" /></p>
+        <p>兴趣爱好：<br />
+        <label for="ft">足球</label><input id="ft" type="checkbox" name="in">&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="bt">篮球</label><input id="bt" type="checkbox" name="in" checked="checked" /></p>
+        <p>个性头像：<input type="file" name="myfile" /></p>
+        
+            <select name="xxx">
+            <option value="0" selected="selected">请选择学历</option>
+            <option value="read">专科</option> 
+            <option value="film">本科</option>  
+            </select><p>
+
+        感兴趣的事：
+            <select name="aboutinfo">
+            <option value="健康">健康</option>
+            <option value="电脑">电脑</option>
+            <option value="美容">美容</option>
+            </select>
+        <p><textarea name="myinfoz"  ></textarea>  <!-- 中间不要有空格 --> 
+        </p>  <!-- 文本域如何设置宽高 -->
+
+
+
+           <p><input type="submit"   value="注册">&nbsp;&nbsp;&nbsp;&nbsp;
+           <input type="reset"   value="重新填写">&nbsp;&nbsp;&nbsp;&nbsp;
+           <input type="button"  value="普通按钮"></p>
+
+           <input type="image" src="img/a.jpg">  <!-- 用图片做提交按钮,type="image"一般只用于做提交按钮 -->
+ 
+
+
+    </form>
+
+    <p>
+
+</fieldset>
+ 
+</body>
+</html>
+
+
+ 

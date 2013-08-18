@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 2_(4)_运算符_自增自减 运算符 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<script type="text/javascript">
+/*
+    function changemyage(){
+        var age=document.getElementById('myage').value;
+        age=parseInt(age);      //解析字符串age，并返回整型
+     // age+=1;
+        document.getElementById('myage').value= ++age;
+        
+    }
+*/
+
+    function changemyage(){
+        var age=document.getElementById('myage').value;
+        age=parseInt(age);     
+
+        alert('你的年纪是' + (age++) );      // 注意 age++ 和 ++age的区别 
+        //age++ 在表达式内，因此先return 0,在 age = age + 1
+                                                    
+        document.getElementById('myage').value = age;
+        
+    }
+
+
+
+</script>
+
+</head>
+<body>
+<input id="myage" type="text" name="changeage" value="0" >
+<input type="button" value="自增" onclick="changemyage();" >
+</body>
+</html>

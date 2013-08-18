@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 7_1_DOM节点查找 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<style type="text/css">
+#header{
+    background:gray;
+    width:300px;
+    height:50px;
+}
+
+#myNewHeader{
+    background:green;
+    width:300px;
+    height:50px;    
+}
+</style>
+
+<script type="text/javascript">
+    function t1()
+    {
+        alert(document.getElementById("article"));      
+    }
+
+    function t2()
+    {
+        alert( document.getElementsByTagName("div"));
+
+         
+
+    }
+
+
+    function t3()   
+    {
+       // alert( document.getElementsByName("hobby"));
+
+       // 使用 length 属性来循环遍历节点列表
+        var myinput=document.getElementsByName("hobby");
+        for (var i=0,len=myinput.length;i<len ;i++ )
+        {
+            alert(myinput[i]);
+        }
+  
+
+       // 通过索引号来访问某个具体的元素。
+       // 要访问第2个 <input> 元素，可以这么写：
+
+        var y=myinput[2];
+        y.style.background="#ccffff";
+        y.style.border="1px solid red";
+
+    }
+
+
+    function t4()           // 点击按钮 改变style样式
+    {
+       // document.getElementById("header").id="myNewHeader"; // 通过Firebug可以看到id已经改变
+        var header=document.getElementById("header");
+        header.style.width="400px";
+        header.style.height="100px";
+        header.style.background="gold";
+    }
+
+    function t5()           // 修改class
+    {
+         var article=document.getElementById("article");
+         alert( article.children.length);   
+    //    alert( article.childNodes.length);    //  要删除div之间的空白 否则会把空格 换行等 文本节点 也计算在内
+
+    }
+// JS 中用typeof打印所有变量，只能得到如下几种原始类型：
+//    num string boolean object undefined   js对数组也是会按object理解
+    
+
+ 
+
+</script>
+</head>
+
+<body>
+
+
+
+    <p id="abc">
+        <span>这里是span</span>
+        阅读文章
+    </p>
+
+    <img src="aaa.jpg" />
+    <div id="article">
+    <div class="textinfo">文章内容 1</div>
+    <div class="textinfo">文章内容 2</div></div>
+    <div id="header">Here is header area</div>
+
+    <p>
+    <input type="text" name="hobby" />
+    <input type="text" name="hobby" />
+    <input type="text" name="hobby" />
+    </p>
+
+    <p>
+        <input type="button" value="ByID" onclick="t1();">
+    </p>
+
+    <p>
+        <input type="button" value="ByTagName" onclick="t2();">
+    </p>
+
+    <p>
+        <input type="button" value="ByName" onclick="t3();">
+    </p>
+
+    <p>
+        <input type="button" value="ChageById" onclick="t4();">
+    </p>
+
+    <p>
+        <input type="button" value="ById结合子元素" onclick="t5();">
+    </p>
+
+</body>
+</html>

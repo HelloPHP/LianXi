@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 5_1_数组 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+
+// 建立空数组的2种方式:
+    var a=[];                // 这里是 [] 
+    var b=new Array();       // 这里是 ()
+
+// 创建: 有初始值的数组:
+    var myarr=['jack',29,58001234];
+    var myNewArr=new Array('Tom','32','13912345678');
+    document.write(myarr[2] + "<br />");
+    document.write(myNewArr[0] + "<br />");
+    document.write(myarr.length + "<br />");
+
+// 创建有个N个值的数组，但是值为空
+// 如果new Array()的参数只有一个N，并且是整型，则创建一个长度为N的数组，如下：
+    var c=new Array(10);                 
+    document.write(c.length + "<br />");    // 数组长度为10
+ 
+// // 修改数组内的一个值
+    var d=['John',30,180,'13918001234'];
+    d[2]=175;                               
+    document.write(d+ "<br />");
+
+
+// 数组的遍历
+    var e=['John',30,180,'13918001234','上海',"男"];
+    var i;
+    var len=0;
+
+    for (i=0, len=e.length ; i<len ;i++ )  // len＝e.length 放在for循环第一段，可以让其只循环1次
+    {
+        document.write(e[i] + "<br />");
+    }
+
+// length长度的变化，对数组的影响： 
+    e.length=3;                           // 截取数组
+    document.write("----------------------<br /> length长度的变化，对数组的影响:<br />"+e+"<br />");
+ 
+    e.length=15;                           
+ 
+ 
+    for (i=0, len=e.length ; i<len ;i++ )  // len＝e.length 放在for循环第一段，可以让其只循环1次
+    {
+        document.write(e[i] + "<br />");
+    }
+    document.write("----------------------<br />" + e + "<br />");
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

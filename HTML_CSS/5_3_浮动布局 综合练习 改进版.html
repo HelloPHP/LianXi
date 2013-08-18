@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 5_3_浮动布局 综合练习 改进版 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<style type="text/css">
+
+*{
+/*     width:0;
+    height:0; */
+    margin:0;
+    padding:0;
+}
+
+#container{
+    width:1002px;
+    /* height:500px; */
+    background:gray;
+}
+
+#header{
+    width:1002px;
+    height:128px;
+    background:green;
+}
+
+#banner{
+    width:1002px;
+    height:237px;
+    background:blue;
+    margin:10px 0;
+}
+
+#main{
+    width:1002px;
+    height:464px;
+    background:pink;
+}
+
+#mleft{
+    width:694px;
+    height:464px;
+    background:purple;  
+    margin-right:10px;
+    float:left;
+}
+
+#mright{
+    width:294px;
+    height:464px;
+    background:black;    
+    float:right;
+}
+
+.contentleft{
+    width:337px;
+    height:222px;
+    background:gold;
+    float:left;
+    margin:5px;
+}
+
+/* .contentright{
+    width:284px;
+    height:222px;
+    background:gold;
+    float:left;
+    margin:5px;
+}   */
+
+#contentright1{
+    width:294px;
+    height:227px;
+    background:gold;
+    margin-bottom:10px;
+ 
+}
+
+#contentright2{
+    width:294px;
+    height:227px;
+    background:gold;
+ 
+}
+
+
+#footer{
+    width:1002px;
+    height:53px;
+    background:gold;
+    margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- 看了老师演示后在做的 -->
+
+<div id="container">
+    <div id="header"></div>
+    <div id="banner"></div>
+    <div id="main">
+        <div id="mleft">  
+            <div class="contentleft">
+            </div>
+            <div class="contentleft">
+            </div>
+            <div class="contentleft">
+            </div>
+            <div class="contentleft">
+            </div>
+        </div>
+        <div id="mright">
+<!--             <div class="contentright"></div>
+            <div class="contentright"></div> -->
+
+            <div id="contentright1"></div>
+            <div id="contentright2"></div>
+
+        </div>
+    </div>
+
+    <div id="footer">
+    </div>
+ 
+</div>
+</body>
+</html>

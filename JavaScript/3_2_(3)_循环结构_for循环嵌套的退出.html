@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> for循环嵌套的退出 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<script type="text/javascript">
+/* for循环嵌套的退出
+9 - 0
+*/
+    var a;
+    var b=0;
+    for (a=9,b=0;a>0 ;a--,b++ )
+    {
+        document.write(a + " - " + b + "<br />");
+          
+    }
+  
+/*ting:
+for (a=9;a>0 ;a-- )
+    {
+        for (b=0;b<9 ;b++ )
+        {            
+            if (a==5)
+            {
+                document.write(a + " a遇到了5， break " + b + "<br />");
+                break ting;
+            }
+            document.write(a + " - " + b + "<br />");
+
+        }
+    }
+*/
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

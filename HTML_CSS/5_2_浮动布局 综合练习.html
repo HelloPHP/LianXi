@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 5_浮动布局 综合练习 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<style type="text/css">
+#main{
+    width:700px;
+    height:1000px;
+    /* background:blue; */
+    margin:0 auto ;
+}
+#header{
+    width:700px;
+    height:70px;
+    background:blue;
+    margin:0 auto 10px;
+}
+
+#header2{
+    width:700px;
+    height:100px;
+    background:gold;
+    margin:0 auto 10px;
+}
+
+#main1{
+    width:420px;
+    height:420px;
+   /*  background:gold; */
+   /*  margin:0 10px 10px 0 ; */
+   float:left;
+}
+
+#left1{
+    width:200px;
+    height:200px;
+    background:yellow;
+    float:left;
+    margin:0 10px 10px 0;
+}
+
+#left2{
+    width:200px;
+    height:200px;
+    background:yellow;
+    float:left;
+/*     margin:0 10px 10px 0; */
+     
+}
+
+#left3{
+    width:200px;
+    height:200px;
+    background:yellow;
+    clear:left;
+    float:left;
+    margin:0 10px 10px 0;
+}
+
+ #left4{
+    width:200px;
+    height:200px;
+    background:yellow;
+    float:left;
+    margin:0 10px 10px 0;
+}   
+
+ #main2{
+    width:280px;
+    height:420px;
+    /* background:gold; */
+    float:right;
+}  
+
+
+#right1{
+    width:280px;
+    height:200px;
+    background:pink;
+    clear:both;
+    float:right;
+    margin:0 0 10px 0;
+}
+
+#right2{
+    width:280px;
+    height:200px;
+    background:pink;
+    float:right;
+    margin:0 0 10px 0;
+}
+
+#footer{
+    clear:both;
+    width:700px;
+    height:100px;
+    background:gold;
+    margin:0 auto;
+}
+</style>
+
+</head>
+<body> 
+<div id="main">
+    <div id="header">header</div>
+    <div id="header2">header2</div>
+  <div id="main1">
+    <div id="left1">left1</div>
+    <div id="left2">left2</div>
+    <div id="left3">left3</div>
+    <div id="left4">left4</div>
+  </div>
+
+
+  <div id="main2">
+    <div id="right1">right1</div>
+    <div id="right2">right2</div>
+  </div> 
+
+    <div id="footer">footer</div>
+</div> 
+
+</body>
+</html>

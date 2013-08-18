@@ -1,0 +1,256 @@
+#container{
+    width:1002px;
+    /* height:500px; */
+    background:white;
+    margin:0 auto;
+}
+
+#header{
+    width:1002px;
+    height:128px;
+    background:green url(top_bg.jpg);
+}
+
+#banner{
+    width:1002px;
+    height:237px;
+    /* background:blue; */
+    margin:8px 0;
+}
+
+#main{
+    width:1002px;
+    height:464px;
+    background:pink;
+}
+
+#mleft{
+    
+    width:694px;
+    height:464px;
+    background:purple;  
+    margin-right:10px;
+    float:left;
+}
+
+#mright{
+    width:294px;
+    height:464px;
+    background:black;    
+    float:right;
+}
+
+.contentleft{
+    width:337px;
+    height:202px;
+    background:#EEE;
+    float:left;
+    margin:5px;
+    font-family:"微软雅黑";
+ 
+
+}
+.contentleft h2{
+    font-size:16px;
+    color:#a0a0a0;
+    margin:5px 0 0 10px;
+
+}
+
+ #contentleftimg{
+    float:left;
+    
+    margin-left: 10px;
+    border:3px solid white;
+    
+ }
+
+ 
+
+ .contentleft ul{
+ margin-left:10px;
+    float:left;
+    width:120px;
+
+ 
+ }
+.contentleft li{
+background:url(service_intro_bg.gif) no-repeat;
+background-position:left center;
+ padding-left:10px;
+     font-size:12px;
+margin-bottom:10px;
+
+  
+}
+
+.contentleft a
+{
+
+    color:#808080;
+     
+}
+
+/* .contentright{
+    width:284px;
+    height:222px;
+    background:gold;
+    float:left;
+    margin:5px;
+}   */
+
+#contentright1{
+    width:294px;
+    height:227px;
+    background:gold;
+    margin-bottom:10px;
+ 
+}
+
+#contentright2{
+    width:294px;
+    height:227px;
+    background:gold;
+ 
+}
+
+
+#footer{
+    width:1002px;
+    height:60px;
+    
+    margin-top:10px;
+
+    /* 新增代码 */
+    
+}
+
+
+
+/* 框架完成后 往里面新增的代码：*/
+
+/* 搜索框  解决方法一：
+form{
+margin-top:8px;
+margin-left:30px;
+ 
+ width:255px;
+ float:right;
+}
+form #searchtxt{
+    width:180px;
+     border:0;
+     color:#808080;
+     background:white;   
+} */
+     
+
+/* 搜索框  解决方法二： */
+form{
+ 
+    float:right;
+    margin-top:11px;
+    margin-right:33px;
+}
+form p{
+    float:left;
+}
+#searchtxt{
+    width:200px;
+    margin-right:5px;
+    border:0;
+    color:#cacaca;
+    background:white;
+}
+
+.headerli{
+    float:left;
+    width:86px;
+    height:37px;
+    font-size:14px;
+    /* margin:0px 5px 5px; */
+     
+/*     background-image:url(nav_bg.gif);
+    background-repeat:repeat; 
+    text-align:center;*/
+}
+
+#header a{
+   display:block;   
+/*    width:86px;
+   height:37px; */
+   text-align:center; 
+   line-height:37px;
+   color:#363636;
+   background:gray url(nav_bg.gif); 
+   font-family:"微软雅黑";
+   /* font:simhei; */
+}
+
+ #header  a:hover {
+    background:orange url(nav_on.gif);
+    color:#fff;
+  }
+   
+ 
+ .fooli {
+
+    padding-left:5px;
+    
+ }
+.fooli a{
+    color:gray;
+    font-size:12px;
+     height:38px;  
+    line-height:38px;
+}
+ 
+
+#footer p {
+     font-size:12px;
+     height:22px;
+     line-height:22px;
+     
+}
+ 
+ #footerul{
+     
+    background:#d8d8d8 url(footer_bg.gif);
+    height:38px;
+ }
+
+
+/*  -------------main区域------------------- */
+
+ #bigtitle{
+ background:url(index_main_top_left_corner.gif),url(index_main_top_bg.gif),url(index_main_top_right_corner.gif);
+background-repeat:no-repeat,repeat-x,no-repeat;
+    width:694px;
+    height:36px;
+ 
+    
+    font-family:"微软雅黑";
+    color:#313131;
+  }    
+
+#bigtitle img{
+padding-top:5px;
+    float:left;
+    margin-left:10px;
+      
+}
+#bigtitle h1{
+    float:left;
+    line-height:36px;
+    font-size:16px;
+    margin-left:10px;  
+}
+
+
+ .more{
+    float:right;
+    
+     padding-right:10px;
+    line-height:36px;
+    font-size:12px;
+}  

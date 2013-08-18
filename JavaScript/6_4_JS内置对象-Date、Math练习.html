@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 6_4_内置对象-Date、Math练习 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+/*
+  1、用Date对象+函数 显示 动态时间，每秒执行一次函数
+     提示：可以用setInterval,setTimeOut
+
+    function showTime()
+    {
+        var myTime=new Date();
+
+        var hour=myTime.getHours();         // 定义时间
+        var mins=myTime.getMinutes();
+        var secs=myTime.getSeconds();
+  
+        document.write(hour + ":" + mins + ":" + secs);
+        
+    }
+         setInterval(showTime,5000);
+        document.write("<br />");
+*/    
+/*
+    2、用Math.random()方法  (random默认返回0-1之间的随机数), 返回5-10之间的随机数
+       
+*/     
+
+     
+     document.write(Math.ceil(Math.random() * (10-5)+5)  + "<br />");
+
+ // 3、在改进函数，接收2个参数，让用户自定义随机数范围
+        
+     var m=2;
+     var n=10;
+    document.write(Math.ceil(Math.random() * (n-m) + m)   +"<br />");
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

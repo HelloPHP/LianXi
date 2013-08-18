@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 6_2_对象的方法 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+//  js中函数也是变量，例如：
+/*
+    var a=null;
+    a=function (){
+        document.write("aaaa");
+    }
+    a();                    // 此时a变成了函数
+*/
+
+
+
+    var stu={name:"张三",age:25,talk:null};
+    var stu2={name:"李四",age:27,talk:null};
+    document.write(stu.age +"<br />－－－－－－－－－－－<br />");
+    stu.age=100;            // 修改对象的方法的属性值
+    stu.myaddress="上海浦东";
+    stu.newid="ID001";      // 添加属性
+    document.write(stu.age +"<br />－－－－－－－－－－－<br />");
+
+    for (y in stu)
+    {
+        document.write(stu[y] + "<br />");  // 用for in结构时，只能使用“对象[属性]”这个方式，不能用“对象.属性” 来遍历
+    }
+    document.write("----------------------<br>")
+
+
+ /*  //例1：  
+    stu.talk=function(){
+        document.write("bbbb");  // 对象的某个属性的值，也可以是函数
+    }
+   stu.talk();
+*/
+    // 例2: 让talk说自己的name
+    function t(){
+        document.write("我的名字是:" + this.name);   
+    }
+    stu.talk=t;
+    stu2.talk=t;
+
+    stu.talk();
+    document.write("<br />")
+    stu2.talk();
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

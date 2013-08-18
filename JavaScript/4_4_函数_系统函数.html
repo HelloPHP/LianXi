@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 4_4_函数_系统函数 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+
+// escape: 将字符串转换成unicode编码
+    var mystr = "人民币";
+    document.write(mystr + "<br />");
+ 
+    var newstr=escape(mystr);           
+    document.write(newstr + "<br />");
+
+
+// unescape: 将escape() 编码的字符串进行解码
+    var unstr=unescape(newstr);         
+    document.write(unstr + "<br />");
+
+
+// parseInt: 转成整型
+    var age="12";
+    age=parseInt(age);
+    age++;
+    document.write(age + "<br />");     // 13
+
+    var a="12.98hello";
+    a=parseInt(a);
+    document.write(a + "<br />");       // 12  
+
+    var b="1298hello";
+    b=parseInt(b);
+    document.write(b + "<br />");       // 1298  
+
+    var c="hello123";
+    c=parseInt(c);
+    document.write(c + "<br />");       // NaN
+
+// parseFloat: 转成浮点型
+    var d="1298.0hello";
+    d=parseFloat(d);
+    document.write(d + "<br />");       // 12.98
+
+// isNaN: 判断 是否是非数值
+    var e="ab29.99";
+    e=parseInt(e);                          
+    if (isNaN(e))
+    {
+        document.write("您输入的是非数字" + "<br />");
+    }else{
+        document.write(e+"是数字" + "<br />");
+    }
+
+// isFinite: 判断是否是 有穷大的数, 是则返回true  
+    document.write(isFinite(5-2) + "<br />");           // true    
+    document.write(isFinite("2012-05-11") + "<br />");  // false
+    var f=1/0;
+    if (isFinite(f))
+    {
+        document.write("您输入的数字有穷大，"+f +"<br>");
+    }else{
+        document.write("无穷大：" + f + "<br>");
+    }
+
+// eval: 计算 JavaScript 字符串，并把它作为脚本代码来执行
+    eval("x=10;y=20;document.write(x*y)");
+
+/**/
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

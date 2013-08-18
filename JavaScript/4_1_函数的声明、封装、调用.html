@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 4_1_函数的声明、封装、调用 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<script type="text/javascript">
+
+// 求矩形面积 ( 矩形面积= 长 * 宽)
+    function juxingmianji(a,b)    // a、b只是形式上的参数，即: 形参,不用声明
+    {                             
+        return a * b ;             // 表示的是：第一个参数 * 第二个参数
+    } 
+    
+    var x=5,y=10;
+    document.write("这个长方形面积是" + juxingmianji(x,y) + "<br />");  // x、y是实际参与运算的参数，即: 实参
+
+
+// -----------------------------------------
+    var a;
+    a = juxingmianji(12,5);
+    document.write(a);
+
+// -----------------------------------------
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> New Document </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+    
+// 点击按钮 改变style样式
+// 修改class  打印元素数量
+
+    function change(){
+       var aa = document.getElementById("aa");
+       aa.style.background="green";
+       aa.style.width="300px";
+       aa.style.height="50px";
+    }
+
+    function change2(){
+       var bb=document.getElementById("aa");
+      document.write (bb.childNodes.length);
+    }
+
+
+</script>
+</head>
+
+<body>
+    <div id="aa"><div class="bb">abc</div><div class="bb">def</div><div class="bb">def</div></div>
+
+    <input type="button" value="点击按钮 改变style样式" onclick="change();">
+
+    <input type="button" value="点击按钮 改变class内样式" onclick="change2();">
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title> 7_2_DOM节点:找没ID 没TagName的节点的2种方法 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<script type="text/javascript">
+   function changediv(){
+        var a=document.getElementById("ul1");
+        alert(a.parentNode);
+        a.parentNode.style.background="gold";
+    }
+ 
+    function changediv2(){
+        var  a=document.getElementsByTagName("div");
+        a[1].style.background="#ccffcc";
+    }
+    
+    function changediv3(){
+        var  a=document.getElementById("ul1");
+        a.firstChild.nextSibling.style.background="#ff3399"; //把第一个空格当成是firstChild了，所以使用nextSibling,即还要在下一个 才是真正的第一个<li>
+    }
+
+    function changediv4(){
+        var a=document.getElementById("button4");
+        var p=a.getElementsByTagName("p");
+        p[0].style.background="#ff9900";
+    }
+
+
+
+
+</script>
+</head>
+
+<body>
+    <div>aaa</div>
+    <div>   <!-- 修改这个DIV -->
+        <ul id="ul1">
+            <li>春</li>
+            <li>夏</li>
+            <li>秋</li>
+            <li>冬</li>
+        </ul>
+
+        <div id="button4">  <!-- button 4 控制这2个p标签 -->
+            <p>aaa</p>
+            <p>bbb</p> 
+            <span>neirong</span>
+            <div>xxx</div>
+            
+        </div>
+    </div>
+    <input type="button" value="修改第二个Div 背景金色(用parentNode)" onclick="changediv();" />
+    <input type="button" value="修改第二个Div 背景 浅蓝(用数组)" onclick="changediv2();" />
+    <input type="button" value="修改ul 第一个子元素 背景 浅蓝(用firstChild)" onclick="changediv3();" />
+    
+    <input type="button" value="修改button4 p标签" onclick="changediv4();" />
+
+</body>
+</html>
